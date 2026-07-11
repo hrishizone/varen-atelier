@@ -1,0 +1,2 @@
+'use client';import gsap from 'gsap';import { ScrollTrigger } from 'gsap/ScrollTrigger';import { RefObject,useEffect } from 'react';
+gsap.registerPlugin(ScrollTrigger);export function useReveal(ref:RefObject<HTMLElement|null>){useEffect(()=>{const el=ref.current;if(!el||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;const q=gsap.utils.selector(el);gsap.from(q('[data-reveal]'),{y:48,opacity:0,duration:1.1,stagger:.08,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 78%'}})},[ref])}
