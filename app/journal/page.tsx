@@ -1,0 +1,2 @@
+import { journal } from '@/lib/data';
+export default function Journal(){return <section className="section pt-36"><div className="mx-auto max-w-5xl"><h1 className="serif text-8xl">Journal</h1>{journal.map(j=><article className="border-b border-charcoal/15 py-10" key={j.slug}><p className="uppercase tracking-[.25em] text-walnut">{j.date}</p><h2 className="serif mt-3 text-5xl">{j.title}</h2><p className="mt-4 text-charcoal/65">Notes on craft, interiors, proportion, and the emotional life of materials.</p></article>)}</div></section>}

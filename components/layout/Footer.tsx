@@ -1,0 +1,2 @@
+import { brand } from '@/lib/data';
+export default function Footer(){return <footer className="bg-charcoal px-5 py-16 text-ivory"><div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-3"><h2 className="serif text-5xl">{brand.tagline}</h2><p>{brand.location}<br/>{brand.email}<br/>{brand.phone}</p><p className="text-sm uppercase tracking-[.25em] text-ivory/60">Instagram · WhatsApp · Maps</p></div></footer>}
